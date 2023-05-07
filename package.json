@@ -1,7 +1,7 @@
 {
-  "name": "swc-lib-react",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@jmtwr/react-lib",
+  "version": "0.0.4",
+  "main": "components/index.js",
   "license": "MIT",
   "devDependencies": {
     "@swc/cli": "^0.1.62",
@@ -12,7 +12,25 @@
     "react-dom": "^18.2.0",
     "typescript": "^5.0.4"
   },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "author": "Jmtwr",
+  "keywords": [
+    "test",
+    "npm"
+  ],
+  "files": [
+    "components",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmtwr/react-lib"
+  },
   "scripts": {
-    "build": "rm -rf dist/components & tsc & swc src/components --out-dir dist"
+    "build": "rm -rf dist & tsc & swc src/components --out-dir dist & swc --copy-files package.json --out-dir dist",
+    "publish": "npm pusblish --access public"
   }
 }
